@@ -1,0 +1,16 @@
+[
+{
+"modid": "albedotorches",
+"name": "Albedo Torches",
+"description": "Uses Albedo's lighting system for colored torches",
+"version": "${version}",
+"credits": "Tamaized",
+"logoFile": "",
+"mcversion": "${mcversion}",
+"url": "",
+"updateUrl": "",
+"authorList": [ "Tamaized" ],
+"screenshots": [],
+"dependencies": []
+}
+]

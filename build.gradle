@@ -1,0 +1,83 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+    }
+}
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'net.minecraftforge.gradle.forge'
+
+///////////////////////////////////////////////////
+// IDE Settings
+///////////////////////////////////////////////////
+idea {
+    project {
+        languageLevel = '1.8'
+    }
+}
+
+version = "0.0.0-${project.modversion}"
+group = "tamaized.albedotorches"
+archivesBaseName = "AlbedoTorches"
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+minecraft {
+    version = project.minecraftversion + "-" + project.forgeversion
+    runDir = "run"
+    mappings = project.mappingversion
+    makeObfSourceJar = false
+    useDepAts = true
+    replaceIn 'AlbedoTorches.java'
+    replace '${version}', project.version
+    replace '${albedoversion}', project.albedoversion
+}
+
+processResources {
+    // this will ensure that this task is redone when the versions change.
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    // replace stuff in mcmod.info, nothing else
+    from(sourceSets.main.resources.srcDirs) {
+        include '**/*.info'
+        include '**/*.properties'
+
+        // replace version and mcversion
+        expand([
+                'version'          : project.version,
+                'mcversion'        : project.minecraftversion,
+                'forge_version'    : project.forgeversion,
+                'mod_version'      : project.version,
+                'minecraft_version': project.minecraftversion
+        ])
+    }
+
+    // copy everything else, thats not the mcmod.info
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}
+
+repositories {
+    maven {
+        name 'progwm\'s maven' // JEI
+        url 'http://dvs1.progwml6.com/files/maven'
+    }
+    maven {
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
+    }
+}
+
+dependencies {
+    deobfCompile "mezz.jei:jei_1.12.1:${project.jeiversion}"
+    compile "albedo:albedo:${project.albedoversion}"
+}
