@@ -23,7 +23,7 @@ idea {
     }
 }
 
-version = "0.0.0-${project.modversion}"
+version = "1.0.${project.modversion}"
 group = "tamaized.albedotorches"
 archivesBaseName = "AlbedoTorches"
 sourceCompatibility = JavaVersion.VERSION_1_8
