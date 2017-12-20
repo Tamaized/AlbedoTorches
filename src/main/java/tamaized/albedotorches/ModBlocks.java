@@ -56,6 +56,11 @@ public class ModBlocks {
 	@GameRegistry.ObjectHolder("black_torch")
 	public static final Block BLACK_TORCH = Blocks.AIR;
 	private static final List<ItemBlock> ITEMBLOCKS = Lists.newArrayList();
+	private static final List<Block> TORCHES = Lists.newArrayList();
+
+	public static List<Block> getTorches() {
+		return TORCHES;
+	}
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
@@ -81,6 +86,8 @@ public class ModBlocks {
 
 	private static void register(IForgeRegistry<Block> reg, Block b) {
 		reg.register(b);
+		if (b instanceof ColorTorchBlock)
+			TORCHES.add(b);
 		if (b.getRegistryName() == null)
 			return;
 		ItemBlock item = new ItemBlock(b);

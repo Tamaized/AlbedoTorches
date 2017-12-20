@@ -1,10 +1,12 @@
 package tamaized.albedotorches;
 
+import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,7 +26,8 @@ public class AlbedoTorches {
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
-
+		for (Block torch : ModBlocks.getTorches())
+			OreDictionary.registerOre("torch", torch);
 	}
 
 	@Mod.EventHandler

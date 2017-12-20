@@ -4,7 +4,7 @@
   },
   "ingredients": [
 	{
-	  "item": "minecraft:torch"
+	  "item": "#TORCH"
 	},
 	{
 	  "item": "#DYELIME"
