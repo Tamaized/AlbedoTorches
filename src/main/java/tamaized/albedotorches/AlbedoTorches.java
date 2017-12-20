@@ -4,6 +4,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,7 +19,7 @@ public class AlbedoTorches {
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-
+		GameRegistry.registerTileEntity(TileEntityColorTorch.class, "TileEntityColorTorch");
 	}
 
 	@Mod.EventHandler
