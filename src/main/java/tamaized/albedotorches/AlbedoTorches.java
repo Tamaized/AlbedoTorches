@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = AlbedoTorches.MODID, version = AlbedoTorches.VERSION, dependencies = "required-before:albedo@[" + AlbedoTorches.ALBEDO_VERSION + ",)")
+@Mod(modid = AlbedoTorches.MODID, version = AlbedoTorches.VERSION, dependencies = "required-before-client:albedo@[" + AlbedoTorches.ALBEDO_VERSION + ",)")
 public class AlbedoTorches {
 
 	public static final String MODID = "albedotorches";

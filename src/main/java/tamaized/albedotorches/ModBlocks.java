@@ -61,7 +61,7 @@ public class ModBlocks {
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		IForgeRegistry<Block> reg = event.getRegistry();
 		for (EnumDyeColor color : EnumDyeColor.values())
-			register(reg, new ColorTorchBlock(color).setRegistryName(color.getDyeColorName() + "_torch").setUnlocalizedName(AlbedoTorches.MODID + "." + color.getDyeColorName() + "_torch"));
+			register(reg, new ColorTorchBlock(color).setRegistryName(color.getName() + "_torch").setUnlocalizedName(AlbedoTorches.MODID + "." + color.getName() + "_torch"));
 	}
 
 	@SubscribeEvent

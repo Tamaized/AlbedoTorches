@@ -1,0 +1,14 @@
+{
+  "result": {
+	"item": "albedotorches:pink_torch"
+  },
+  "ingredients": [
+	{
+	  "item": "minecraft:torch"
+	},
+	{
+	  "item": "#DYEPINK"
+	}
+  ],
+  "type": "forge:ore_shapeless"
+}

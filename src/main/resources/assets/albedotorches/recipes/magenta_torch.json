@@ -1,0 +1,14 @@
+{
+  "result": {
+	"item": "albedotorches:magenta_torch"
+  },
+  "ingredients": [
+	{
+	  "item": "minecraft:torch"
+	},
+	{
+	  "item": "#DYEMAGENTA"
+	}
+  ],
+  "type": "forge:ore_shapeless"
+}

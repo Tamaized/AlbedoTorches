@@ -1,0 +1,14 @@
+{
+  "result": {
+	"item": "albedotorches:purple_torch"
+  },
+  "ingredients": [
+	{
+	  "item": "minecraft:torch"
+	},
+	{
+	  "item": "#DYEPURPLE"
+	}
+  ],
+  "type": "forge:ore_shapeless"
+}
