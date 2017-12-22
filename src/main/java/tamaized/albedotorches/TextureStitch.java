@@ -12,7 +12,7 @@ public class TextureStitch {
 	public static final ResourceLocation FLAME = new ResourceLocation(AlbedoTorches.MODID, "particle/flame");
 
 	@SubscribeEvent
-	public static void hook(TextureStitchEvent.Pre e){
+	public static void hook(TextureStitchEvent.Pre e) {
 		e.getMap().registerSprite(FLAME);
 	}
 
