@@ -1,25 +1,14 @@
-# eclipse
-bin
-*.launch
-.settings
-.metadata
-.classpath
-.project
-
-# idea
-out
-*.ipr
-*.iws
-*.iml
-.idea
-
-# gradle
-build
-.gradle
-
-# other
-eclipse
-run
-classes
-build.bat
-Build.jar
+*
+!gradlew
+!gradlew.bat
+!/gradle
+!/gradle/**
+!/src/
+!/src/**
+/src/test/
+!build.gradle
+!gradle.properties
+!LICENSE
+!README.md
+!/run/
+!/run/eula.txt
