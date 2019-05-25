@@ -1,0 +1,13 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+	"textures": { "torch": "albedotorches:blocks/albedotorch" }
+  },
+  "variants": {
+	"facing=up": { "model": "albedotorches:torch" },
+	"facing=east": { "model": "albedotorches:torch_wall" },
+	"facing=south": { "model": "albedotorches:torch_wall", "y": 90 },
+	"facing=west": { "model": "albedotorches:torch_wall", "y": 180 },
+	"facing=north": { "model": "albedotorches:torch_wall", "y": 270 }
+  }
+}
