@@ -11,6 +11,6 @@
 "updateUrl": "",
 "authorList": [ "Tamaized" ],
 "screenshots": [],
-"dependencies": [ "albedo@[1.12.2-1.1.0,)" ]
+"dependencies": [ "albedo@[1.1.0,)" ]
 }
 ]
