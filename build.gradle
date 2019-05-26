@@ -37,7 +37,7 @@ minecraft {
     useDepAts = true
     replaceIn 'AlbedoTorches.java'
     replace '${version}', project.version
-    replace '${albedoversion}', "1.1.0"
+    replace '${albedoversion}', "1.0.0"
 }
 
 processResources {
